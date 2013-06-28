@@ -1,0 +1,232 @@
+
+/*=====================================
+Main Page Layout
+======================================*/
+
+.wl-grid {
+ width: 80%;
+ overflow: hidden;
+ margin: auto;
+ max-width: 968px;
+ border: 10px solid black;
+}
+
+body {
+    font-size: 1.2em;
+}
+
+/*============================
+Grid Items
+============================*/
+
+.wl-grid .wl-item {
+ margin: 0.5% 0.5% 10px 0.5%;
+ width: 23.875%;
+ float: left;
+}
+
+.wl-item .description {
+ font-family: Lato, Helvetica, "sans-serif";
+ font-size: 1em;
+}
+
+.wl-item h2 {
+margin: 0;
+padding: 0;
+}
+
+.wl-item p {
+ margin: 0;
+ padding: 0;
+}
+
+.wl-thumbnail-container {
+ display: block;
+ position: relative;
+}
+
+.wl-thumbnail {
+ max-width: 100%;
+}
+
+.swatches img {
+ width: 20px;
+ height: 20px;
+ opacity: 0.5;
+}
+
+.swatches img:hover {
+ opacity: 2;
+}
+
+.swatches {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+.swatches li {
+ display: inline;
+ margin: 0 -0.5px 0 -0.5px;
+}
+
+/*============================
+Grid Items - hovering icons
+============================*/
+
+.wl-thumbnail-container .wl-mglass {
+ opacity: 0;
+ position: absolute;
+ right: 3px;
+ bottom: 3px;
+}
+
+.wl-thumbnail-container:hover .wl-mglass {
+ opacity: 1;
+ -webkit-transition: opacity 0.2s;
+}
+
+.wl-thumbnail-container .wl-vicon {
+ opacity: 0;
+ position: absolute;
+ top: 3px;
+ left: 3px;
+
+}
+
+.wl-thumbnail-container:hover .wl-vicon {
+ opacity: 1;
+ -webkit-transition: opacity 0.2s;
+    
+}
+
+.wl-thumbnail-container .wl-vicon-hover {
+ opacity: 0;
+ position: absolute;
+ top: 3px;
+ left: 3px;
+}
+
+.wl-thumbnail-container:hover .wl-vicon-hover {
+ opacity: 1;
+ -webkit-transition: opacity 1s;
+}
+
+.wl-thumbnail-container .wl-vicon:hover {
+ opacity: 0;
+    
+}
+
+/*============================
+Email Sign Up
+=============================*/
+
+
+.wl-aside-signup {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    margin: 100px auto;
+    border: 2px;
+    -webkit-border-image:url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+    -moz-border-image: url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+    border-image:url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+    text-align: center;
+    font-family: Lato Regular, Georgia, "Sans-Serif";
+}
+
+.wl-aside-signup .form-first-line {
+    margin: 18px 0 0 0 ;
+    padding: 0;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    line-height: 10px;
+    font-style: italic;
+    color: #ff008a;
+
+}
+
+.wl-aside-signup .form-second-line {
+    margin: 8px 0 0 0;
+    padding: 0;
+    font-size: 0.2em;
+    text-transform: lowercase;
+    line-height: 10px;
+    letter-spacing: 1px;
+    color: rgb(50,50,50);
+}
+
+.wl-aside-signup .text-field {
+    height: 28px;
+    width: 186px;
+    margin: 18px 0 0 0;
+    font-style: italic;
+    letter-spacing: 1px;
+    border: 1px solid;
+    font-size: 0.55em;
+    -webkit-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+  -moz-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+   border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+}
+
+.wl-aside-signup .wl-text-button {
+ width: 78px;
+ height: 30px;
+ margin: 10px 0 20px 0;
+ border: 1px solid;
+ background: #ff008a;
+ -webkit-border-image: url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+ -moz-border-image: url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+ border-image: url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+ font-size: 0.55em;
+ color: white;
+
+}
+
+.wl-aside-signup .sprite:before {
+    content: url(../img/sprite_bird.png);
+    position: absolute;
+    left: -25px;
+    bottom: 0px;
+}
+
+/*============================
+Media Queries
+=============================*/
+/* MEDIA QUERIES*/
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+    /* no breakpoint needed here */
+}
+
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+    .wl-grid .wl-item {
+        width: 31.833%;
+        -webkit-transition: linear .2s;
+        transition: linear .2s;
+        }  /*also 3 colummns*/
+   
+}
+ 
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+    .wl-grid .wl-item {
+        width: 47.75%;
+        -webkit-transition: linear .2s;
+        transition: linear .2s;
+        } /* 2column layout */
+    
+
+}
+ 
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+    .wl-grid .wl-item {
+        width: 96%;
+        -webkit-transition: linear .2s;
+        transition: linear .2s;
+    }
+}
