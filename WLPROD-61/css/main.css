@@ -191,6 +191,30 @@ Email Sign Up
 }
 
 /*============================
+Browser Refinements
+=============================*/
+.wl-refinements form {
+    display: inline;
+    position: relative;
+    float: left;
+    -webkit-appearance: none;
+}
+
+.wl-refinements .number {
+    display: inline;
+    position: relative;
+    float: right;
+}
+
+.line {
+    border: 2px solid black;
+    width: 100px;
+    height: 20px;
+}
+
+
+
+/*============================
 Media Queries
 =============================*/
 /* MEDIA QUERIES*/
