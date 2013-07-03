@@ -8,7 +8,6 @@ Main Page Layout
  overflow: hidden;
  margin: auto;
  max-width: 968px;
- border: 10px solid black;
 }
 
 body {
@@ -191,33 +190,99 @@ Email Sign Up
 }
 
 /*============================
-Browser Refinements
+Ticket #WLPROD-67 Browse Refinements
 =============================*/
-.wl-refinements form {
-    display: inline;
+
+.wl-refinement {
     position: relative;
-    float: left;
-    -webkit-appearance: none;
+    overflow: hidden;
 }
 
-.wl-refinements .number {
-    display: inline;
+.wl-refinement:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-image: url(../img/border-50.png);
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.wl-refinement .container {
+    position: relative;
+    background: white;
+    z-index: 2;
+
+}
+
+.wl-refinement .wl-select {
+    padding: .5em 2em .5em 1em; 
+    width: 150px;
+    font-family: Lato;
+    font-weight: bold;
+    font-style: italic;
+    font-size: .6em;
+    letter-spacing: 1px;
+    color: #5E5E5E;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border: 1px solid transparent;
+    -webkit-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+    -moz-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+    border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
+    background-image:url(../img/arrow.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    opacity: 0.9;
+}
+
+.wl-refinement .container--left {
+    float: left;
+}
+
+.wl-refinement .container--right {
     position: relative;
     float: right;
+    line-height: 26px;
+    vertical-align: middle;
 }
 
-.line {
-    border: 2px solid black;
-    width: 100px;
-    height: 20px;
+.wl-submit-button {
+    display: none;
+}
+
+.no-js .wl-submit-button {
+    display: inline;
+}
+
+.wl-refinement .text {
+    font-size: 0.6em;
+    font-family: Lato, Georgia, "Sans-Serif";
+    font-style: italic;
+    color: #a1a1a1;
+
 }
 
 
+/*============================
+footer
+=============================*/
+
+.footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 300px;
+    background: grey;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
 
 /*============================
 Media Queries
 =============================*/
-/* MEDIA QUERIES*/
 
 @media only screen and (max-width : 940px),
 only screen and (max-device-width : 940px){
@@ -231,6 +296,13 @@ only screen and (max-device-width : 720px){
         width: 31.833%;
         -webkit-transition: linear .2s;
         transition: linear .2s;
+ .wl-line {
+    width: 30%;
+    margin: 0 0 0 0;
+    background: purple;
+ }
+
+
         }  /*also 3 colummns*/
    
 }
@@ -242,7 +314,13 @@ only screen and (max-device-width : 530px){
         -webkit-transition: linear .2s;
         transition: linear .2s;
         } /* 2column layout */
-    
+    .wl-refinement {
+        font-size: .6em;
+    }
+    .wl-form-container select {
+        font-size: .15em;
+        background: url(../img/sm_arrow.png) no-repeat right;
+    }    
 
 }
  
