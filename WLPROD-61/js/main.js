@@ -11,7 +11,7 @@ $(document).ready(function() {
 			// setting mainimage equal 
 			mainimage = $this.find( $('.wl-thumbnail') );
 			//defining what a swatch is, equal to IMG elements under a class of .swatches
-			$swatch = $this.find('.swatches img');
+			$swatch = $this.find('.swatch_list a');
 			//on-click event for clicking on a swatch
 			$swatch.on('click', function() {			
   				//src = this attribute(src) value of x
@@ -23,12 +23,12 @@ $(document).ready(function() {
   				
   				//passing attr function src attribute and SRC variable
 				mainimage.attr('src', src); 
-				console.log('not equal, change it');
+				// console.log('not equal, change it');
 				
 				//do nuthin'
 				} else {
 
-					console.log('equal, dont change anything');
+					// console.log('equal, dont change anything');
 					
 					return;
 				
