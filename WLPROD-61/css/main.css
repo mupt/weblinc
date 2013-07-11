@@ -165,15 +165,17 @@ Thumbnail Hovering Icons
 .wl-thumbnail-container:hover .wl-mglass {
     position: absolute;
     -webkit-transition: opacity 0.2s; 
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     right: 4px;
     bottom: 6px;
-    background-image: url(../img/mag_glass.png);
+    background-image: url(../img/mag_glass.png)
 }
 
 .wl-thumbnail-container .wl-mglass:hover {
     background-image: url(../img/mag_glass_hover.png);
+    height: 26px;
+    width: 26px;
 }
 
 
