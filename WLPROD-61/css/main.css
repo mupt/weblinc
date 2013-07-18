@@ -416,11 +416,11 @@ Removes bullets and indents sublist
     color: #eb5190;
 }
 
-.sub-menu .list-item {
+.wl-navigation .sub-menu .list-item {
     padding-left: 3em;
 }
 
-.sub-menu .sub-menu .list-item {
+.wl-navigation .sub-menu .sub-menu .list-item {
     padding-left: 4em;
 }
 /*============================
