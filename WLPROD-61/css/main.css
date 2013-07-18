@@ -143,19 +143,23 @@ Ticket #WLPROD-66 Product Thumbnail
 }
 
 .pink_swatch {
-    background-image: url(../img/pink_swatch.png);
+    background-image: url(../img/sprite_sheet.png);
+    background-position: 0px -26px;
 }
 
 .blue_swatch {
-    background-image: url(../img/blue_swatch.png);
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -26px -26px;
 }
 
 .orange_swatch {
-    background-image: url(../img/orange_swatch.png);
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -52px -26px;);
 }
 
 .green_swatch {
-    background-image: url(../img/green_swatch.png);
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -78px -26px;
 }
 
 /*============================
@@ -169,28 +173,34 @@ Thumbnail Hovering Icons
     width: 26px;
     right: 4px;
     bottom: 6px;
-    background-image: url(../img/mag_glass.png)
+    background-image: url(../img/sprite_sheet.png);
+    background-position: 0px 0px;
 }
 
 .wl-thumbnail-container .wl-mglass:hover {
-    background-image: url(../img/mag_glass_hover.png);
     height: 26px;
     width: 26px;
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -26px 0px;
 }
 
 
 .wl-thumbnail-container:hover .wl-vicon {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     left: 4px;
     top: 6px;
-    background-image: url(../img/video_icon.png);
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -52px 0px;
     -webkit-transition: opacity 0.2s;
 }
 
 .wl-thumbnail-container .wl-vicon:hover {
-    background-image: url(../img/video_icon_hover.png);
+    height: 26px;
+    width: 26px;
+    background-image: url(../img/sprite_sheet.png);
+    background-position: -78px 0px;
 }
 
 
@@ -268,10 +278,14 @@ Ticket #WLPROD-64 Aside Newsletter Signup
 }
 
 .wl-aside-signup .sprite:before {
-    content: url(../img/sprite_bird.png);
+    content: "";
+    background: url(../img/sprite_sheet.png);
+    background-position: 0px -78px;
     position: absolute;
-    left: -25px;
-    bottom: 5px;
+    width: 52px;
+    height: 30px;
+    left: -17px;
+    bottom: 22px;
 }
 
 /*============================

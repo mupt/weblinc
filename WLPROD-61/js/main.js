@@ -10,7 +10,8 @@ $(document).ready(function() {
 		//defining what a swatch is, equal to IMG elements under a class of .swatches
 		$swatch = $this.find('.swatch_list a');
 		//on-click event for clicking on a swatch
-		$swatch.on('click', function() {			
+		$swatch.on('click', function() {	
+	
   			//src = this attribute(src) value of x
   			var src = $(this).data('src'),
   			//mainimage_source = "src" to be changed
