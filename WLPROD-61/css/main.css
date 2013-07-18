@@ -349,6 +349,80 @@ Ticket #WLPROD-67 Browse Refinements
     letter-spacing: 1px;
 }
 
+
+/*============================
+WL Navigation - border with the name in the center
+=============================*/
+.wl-navigation {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 230px;
+}
+
+
+.wl-navigation .title {
+    display: inline-block;
+    position: relative;
+    padding: 0 0.45em;
+    top: 9px;
+    font-family: Georgia;
+    font-size: 0.75em;
+    font-style: italic;
+    background: white;
+}
+
+.wl-navigation .menu {
+    text-align: left;
+    padding: 1em 0 1em 0;
+    font-family: Lato;
+    font-size: 0.5em;
+    letter-spacing: 0.1825em;
+    text-transform: uppercase;
+}
+
+.wl-navigation .wl-list-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wl-navigation .list-item {
+    display: block;
+    padding: 0.845em 0 0.845em 2em;
+    text-decoration: none;
+    color: #7e7e7e;
+    border-right: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+}
+
+
+.wl-navigation .list-item:hover {
+    background: #f7f7f7;
+    color: #000000;
+}
+
+
+
+/*============================
+Removes bullets and indents sublist
+=============================*/
+
+.js .wl-navigation .is-inactive {
+    display: none;
+}
+
+.js .wl-navigation .is-active {
+    color: #eb5190;
+}
+
+.sub-menu .list-item {
+    padding-left: 3em;
+}
+
+.sub-menu .sub-menu .list-item {
+    padding-left: 4em;
+}
 /*============================
 Border Images
 =============================*/
@@ -358,72 +432,4 @@ Border Images
     border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;    
 }
 
-
-
-/*============================
-WL Navigation - border with the name in the center
-=============================*/
-.wl-navigation {
-    margin: auto;
-    display: block;
-    width: 230px;
-    text-align: center;
-}
-
-
-.wl-navigation .title {
-    display: inline-block;
-    position: relative;
-    padding: 0 0.45em;
-    top: 9px;
-    background: white;
-    font-style: italic;
-    font-size: 0.75em;
-    font-family: Georgia;
-}
-
-.wl-navigation .menu {
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 0.5em;
-    font-family: Lato;
-    letter-spacing: 0.1825em;
-    padding: 1em;
-}
-
-
-.wl-navigation .wl-list-items {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 1em;
-}
-
-.wl-navigation .list-item {
-    text-decoration: none;
-    display: block;
-    padding: 0.845em 0 0.845em 0;
-    color: #7e7e7e;
-}
-
-
-.wl-navigation .list-item:hover {
-    background: #f7f7f7;
-    color: #000000;
-}
-/*============================
-Removes bullets and indents sublist
-=============================*/
-
-
-.wl-navigation .sub-menu {
-    margin-left: 1em;
-}
-
-.js .wl-navigation .is-inactive {
-    display: none;
-}
-
-.js .wl-navigation .is-active {
-    color: #eb5190;
-}
 

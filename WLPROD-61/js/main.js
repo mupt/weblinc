@@ -28,6 +28,8 @@ $(document).ready(function() {
 	});		
 });
 
+// Provide Click functionality for drop-down menu
+
 
 // Wait for DOM to load
 $(document).ready(function(){
@@ -54,6 +56,18 @@ $(document).ready(function(){
 		});
 	});
 })
+
+// Additional logic needed for this to work properly
+// Need to remove active class from closest anchor tag vertically up in the DOM so that the pink active state is transferred
+// to the menu item that is most recently clicked.
+//----
+// Need to ensure that the second level of navigation collapses when the top level is clicked.  All active states underneath 
+//that ul need to lose their active state or toggle back to inactive
+
+
+
+
+
 
 
 
