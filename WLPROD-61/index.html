@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Josefin+Sans:400,600,700,400italic,700italic|Josefin+Slab:400,600,700|IM+Fell+Double+Pica:400,400italic|Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Josefin+Sans:400,600,700,400italic,700italic|Josefin+Slab:400,600,700|IM+Fell+Double+Pica:400,400italic|Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -218,19 +218,19 @@
  <div class="wl-refinement">
   <div class="container container--left">
    <form>
-    <select class="wl-select">
+    <select class="wl-select light-grey-border">
      <option>Sort by</option>
      <option>Touch</option>
      <option>Feel</option>
      <option>Flavor</option>
     </select>
-    <select class="wl-select">
+    <select class="wl-select light-grey-border">
      <option>Shop by Size</option>
      <option>Too small</option>
      <option>Just right</option>
      <option>Too big</option>
     </select>
-    <select class="wl-select">
+    <select class="wl-select light-grey-border">
      <option>Shop by Color</option>
      <option>Purple</option>
      <option>Blue</option>
@@ -247,36 +247,52 @@
 </div>
 <!-- end browser refinements -->
 
-<!-- begin aside navigation -->
+<!-- Begin Aside Navigaton -->
 
-<div class="wl-ui-list-container">
-  <ul class="wl-ui-list">
-    <li><a href="#"> Dresses </a>
-      <ul class="wl-ui-list">
-       <li><a href="#">Day</a></li>
-       <li><a href="#">Party</a></li>
-       <li><a href="#">Night Out</a></li>
-       <li><a href="#">Knit & Jersey</a></li>
-       <li><a href="#">Shop by shape</a></li>
-        <ul class="wl-ui-list">
-         <li><a href="#">Maxi</a></li>
-         <li><a href="#">Fit n' flare</a></li>
-         <li><a href="#">Body con</a></li>
-         <li><a href="#">shift & smock</a></li>
-        </ul>
+
+<div class="wl-navigation">
+  <span class="title"> Category </span>
+    <div class="menu light-grey-border">
+      <ul class="wl-list-items">
+        <li> 
+          <a href="#" class="list-item"> Dresses </a> 
+          <ul class="wl-list-items sub-menu is-inactive">
+            <li><a href="#" class="list-item"> Day </a></li>
+            <li><a href="#" class="list-item"> Party </a></li>
+            <li><a href="#" class="list-item"> Night Out </a></li>
+            <li><a href="#" class="list-item"> Knit & Jersey </a></li>
+            <li><a href="#" class="list-item"> Shop by Shape </a>
+              <ul class="wl-list-items sub-menu is-inactive" >
+                  <li><a href="#" class="list-item"> Maxi </a></li>
+                  <li><a href="#" class="list-item">  Fit N' Flare </a></li>
+                  <li><a href="#" class="list-item"> Body Con </a></li>
+                  <li><a href="#" class="list-item"> Shift & Smock </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" class="list-item"> Tops </a></li>
+          <li><a href="#" class="list-item"> Sweaters </a></li>
+          <li><a href="#" class="list-item"> Jackets </a></li>
+          <li><a href="#" class="list-item"> Denim shop this is an example of wrapping </a></li>
+          <li><a href="#" class="list-item"> Pants </a></li>
+          <li><a href="#" class="list-item"> Shorts </a></li>
+          <li><a href="#" class="list-item"> Skirts </a></li>
+          <li><a href="#" class="list-item"> Layering </a></li>
       </ul>
-     </li>
-     <li><a href="#"> Tops </a></li>
-     <li><a href="#"> Sweats </a></li>
-     <li><a href="#"> Jackets </a></li>
-     <li><a href="#"> Denim shop this is an example of wrapping </a></li>
-     <li><a href="#"> pants </a></li>
-     <li><a href="#"> shorts </a></li>
-     <li><a href="#"> skirts </a></li>
-     <li><a href="#"> layering </a></li>
-   </ul>
+    </div>
+  </div>
 </div>
 
+
+
+
+
+
+
+
+
+<!-- End Aside Navigation -->
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -289,7 +305,7 @@
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
+            g.src='http://www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
