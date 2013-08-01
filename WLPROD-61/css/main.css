@@ -2,315 +2,378 @@
 /*=====================================
 Main Page Layout
 ======================================*/
+.wl-page {    
+    margin:auto;
+    width: 1200px;
+}
 .wl-main {
-    margin: auto;
-    max-width: 968px;
-    border: 5px solid black;
+    width: 80%;
+    float: left;   
 }
 
+.wl-aside {
+    margin-right: 10px;
+    width: 19.1666%;
+    min-width: 160px;
+    max-width: 230px;
+    float: left;
+}
+
+/*=====================================
+Main Page Layout - Resize to 900px layout.
+======================================*/
+
+@media only screen and (max-width: 1200px),
+only screen and (max-device-width: 1200px){
+    .wl-page {
+        margin: auto;
+        width: 900px;
+    }
+    .wl-aside {
+        width: 17.7778%; /* 160px / 900 = 17.7778% */
+    }
+}
+/*=====================================
+Clearfix / Reusable styles
+======================================*/
 .wl-cf {
     overflow: hidden;
 }
 
-.wl-aside {
-    margin: 100px auto;
-}
+/*============================
+Border Images
+=============================*/
 
-body {
-    font-size: 1.2em;
+.light-grey-border {
+    border: 1px solid transparent;
+    -webkit-border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;
+    -moz-border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;
+    border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;    
 }
-
 
 /*============================
-Ticket #WLPROD-65 Grid
-============================*/
-.wl-item-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-.wl-item-list .wl-item {
-     display: inline-block;
-     margin: 0.5% 0.5% 10px 0.5%;
-     width: 24%;
-     float: left;
-     vertical-align: top;
-}
-
-@media only screen and (max-width : 720px),
-only screen and (max-device-width : 720px){
-    .wl-item-list .wl-item {
-        width: 31.833%;
-        -webkit-transition: linear .2s;
-        transition: linear .2s;
-        margin: 0 4px 0 4px;
-         }  /*also 3 colummns*/
-   
-}
- 
-@media only screen and (max-width : 530px),
-only screen and (max-device-width : 530px){
-    .wl-item-list .wl-item {
-        width: 47.75%;
-        -webkit-transition: linear .2s;
-        transition: linear .2s;
-        } /* 2column layout */
-}
- 
-@media only screen and (max-width : 320px),
-only screen and (max-device-width : 320px){
-    .wl-grid .wl-item {
-        width: 96%;
-        -webkit-transition: linear .2s;
-        transition: linear .2s;
-    }
-}
-
-
-/*============================
-Header Holder
+Header
 ============================*/
 
 .wl-header {
-    margin-bottom: 50px;
-    width: 100%;
-    height: 50px;
     text-align: center;
     font-size: 3em;
-    background: #555;
     color: white;
+    background: #555;
 }
-
-@media only screen and (max-width: 530px),
-only screen and (max-device-width: 530px){
-    .wl-header {
-        font-size: 2em;
-    }
-}
-
 
 /*============================
-Ticket #WLPROD-66 Product Thumbnail
+Thumbnail Grid
 ============================*/
-
-.wl-item .description, .price{
-    margin: 2px 0 0 0;
+.wl-item-list {
+    margin: 0;
     padding: 0;
-    font-family: Lato;
-    font-size: 0.75em;
-    color: #5E5E5E;
-    letter-spacing: 1px;
-    font-weight: 100;
+    list-style: none;
+
 }
 
-.wl-thumbnail-container {
-     position: relative;
+.wl-item-list .wl-item {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 4px;
+    width: 24.58333%; /* Image (236px) / container (960px). */
+    float: left;
+}
 
+/*============================
+Thumbnail Grid - Resize to 900px layout
+============================*/
+@media only screen and (max-width: 1200px),
+only screen and (max-device-width: 1200px){
+    .wl-item-list .wl-item {
+        width: 32.7778%; /* Image (236px) / new container (720px). */
+    }
+
+}
+
+/*============================
+Thumbnails
+============================*/
+
+.wl-item .description {
+    margin: 0;
+    padding: 2px;
+    font-family: Georgia;
+    font-size: 0.8em; /* Needs to be font size 13 */
+    color: #3e3e3e;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+.wl-item .price {
+    margin: 0;   
+    padding: 1px;
+    font-size: 0.8em; /* needs to also be 13 */
+    font-family: Lato;
+    color: #7e7e7e;
+    font-weight: 100;
+    text-decoration: none;
 }
 
 .wl-thumbnail {
     display: block;
-     height: 100%;
-     width: 100%; 
+    width: 236px;
+    height: 314px;
 }
 
-.swatch_list {
-    list-style: none;
+.wl-thumbnail-container {
+     position: relative;
+}
+
+/*============================
+Thumbnails Swatches
+============================*/
+
+.wl-item .swatch-list {
+    position: relative;
     margin: 0;
     padding: 0;
+    list-style: none;
 
 }
 
-.swatch_list .text {
-    font-size: 0.5em;
+.wl-item .text {
+    position: absolute;
+    top: 6px;
+    padding-left: 4px;
+    font-size: 0.535em;
     color: #fe239b;
-    line-height: 20px;
 }
 
-.swatch {
+.wl-item .swatch {
     display: inline-block;
-    margin: 2px 3px 0 0;
-    height: 20px;
+    margin: 2px 2px 0 0;
     width: 20px;
-    opacity: 0.5;
+    height: 20px;
     float: left;
+    background-image: url(../img/sprite_sheet.png);
+    opacity: 0.5;
 }
 
-.swatch:hover {
+.wl-item .swatch:hover {
     opacity: 1;
 }
 
-.pink_swatch {
-    background-image: url(../img/sprite_sheet.png);
-    background-position: 0px -26px;
+.wl-item .swatch--pink{
+    background-position: 0px -40px;
 }
 
-.blue_swatch {
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -26px -26px;
+.wl-item .swatch--blue {
+    background-position: -40px -40px;
 }
 
-.orange_swatch {
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -52px -26px;);
+.wl-item .swatch--orange {
+    background-position: -80px -40px;
 }
 
-.green_swatch {
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -78px -26px;
+.wl-item .swatch--green {
+    background-position: -120px -40px;
 }
+
 
 /*============================
 Thumbnail Hovering Icons
 ============================*/
 
-.wl-thumbnail-container:hover .wl-mglass {
+.wl-thumbnail-container .ico {
     position: absolute;
-    -webkit-transition: opacity 0.2s; 
-    height: 26px;
+    background-image: url(../img/sprite_sheet.png);
+}
+
+.wl-thumbnail-container:hover .wl-mglass {
     width: 26px;
+    height: 26px;
     right: 4px;
     bottom: 6px;
-    background-image: url(../img/sprite_sheet.png);
     background-position: 0px 0px;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    transition: opacity 0.2s;
 }
 
 .wl-thumbnail-container .wl-mglass:hover {
-    height: 26px;
     width: 26px;
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -26px 0px;
+    height: 26px;
+    background-position: -40px 0px;
 }
 
 
 .wl-thumbnail-container:hover .wl-vicon {
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    width: 24px;
+    height: 24px;
     top: 6px;
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -52px 0px;
+    left: 4px;
+    background-position: -80px 0px;
     -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    transition: opacity 0.2s;
 }
 
 .wl-thumbnail-container .wl-vicon:hover {
-    height: 26px;
-    width: 26px;
-    background-image: url(../img/sprite_sheet.png);
-    background-position: -78px 0px;
+    width: 24px;
+    height: 24px;
+    background-position: -120px 0px;
 }
 
+.wl-item .overlay {
+    width: 34px;
+    height: 32px;
+    background-position: -80px -80px;
+    top: 1px;
+    right: 1px;
+    cursor:pointer;
+}
 
 /*============================
-Ticket #WLPROD-64 Aside Newsletter Signup
+Aside Newsletter Signup
 =============================*/
-
-.wl-aside-signup-container {
-    max-width: 230px;
-}
 
 .wl-aside-signup {
     position: relative;
-    border: 2px;
+    margin-top: 6px;
+    padding: 1em 1.1em;
+    border-width: 2px;    
     -webkit-border-image:url(../img/border-pink.png) 5 5 5 5 repeat stretch;
-    -moz-border-image: url(../img/border-pink.png) 5 5 5 5 repeat stretch;
+    -moz-border-image:url(../img/border-pink.png) 5 5 5 5 repeat stretch;
     border-image:url(../img/border-pink.png) 5 5 5 5 repeat stretch;
     text-align: center;
-    font-family: Lato Regular, Georgia, "Sans-Serif";
 }
 
-.wl-aside-signup .form-first-line {
-    margin: 1.4em 0 0 0 ;
-    padding: 0;
-    font-size: 0.65em;
-    font-weight: 100;
-    text-transform: uppercase;
-    line-height: 0.9em;
+.wl-aside-signup .form-title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.75em;
+    font-family: Georgia, "Sans-Serif";
     font-style: italic;
     color: #fe239b;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.wl-aside-signup .form-second-line {
-    margin: 0.6em 0 0 0;
-    padding: 0;
-    font-size: 0.55em;
-    font-weight: 100;
+.wl-aside-signup .form-desc {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.7em;
+    font-family: Lato, Georgia, "Sans-Serif";
+    color: #383838;
     text-transform: lowercase;
-    line-height: 0.9em;
-    letter-spacing: 0.1em;
-    color: #666666;
-    font-family: Helvetica;
+    letter-spacing: 1px;
 }
 
 .wl-aside-signup .text-field {
-    height: 2.1em;
-    width: 78%;
-    margin: 1.6em 0 0 0;
-    padding: 0 0 0 1em;
-    font-size: 0.65em;
-    font-weight: 100;
+    box-sizing: border-box;
+    padding: 0.6em 1em;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 0.75em;
+    font-family: Georgia;
     font-style: italic;
-    font-family: Lato;
-    letter-spacing: 0.1em;
-    border: 1px solid;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
     -webkit-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
     -moz-border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
     border-image: url(../img/border-50.png) 5 5 5 5 repeat stretch;
 }
 
-.wl-aside-signup .wl-text-button {
-     width: 35%;
-     height: 3.2em;
-     margin: 1em 0 2em 0;
-     font-size: 0.50em;
-     font-weight: 100;
-     color: white;
-     border: 2px solid transparent;
-     background: #ff008a;
-     -webkit-border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
-     -moz-border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
-     border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
+/*============================
+Newsletter Signup - Resize font for text-field for 900px layout
+============================*/
 
+@media only screen and (max-width: 1200px),
+only screen and (max-device-width: 1200px){
+    .wl-aside-signup .text-field {
+        font-size: 0.5em;
+    }
+}
+/*============================
+Aside Newsletter Signup - Sign Up Button
+=============================*/
+
+.wl-aside-signup .wl-text-button {
+    margin-bottom: 5px;
+    padding: 0;
+    background: none;
+    border-width: 1px;
+    -webkit-border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
+    -moz-border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
+    border-image: url(../img/border-pink.png) 25 5 5 5 repeat;
+
+}
+
+.wl-aside-signup .wl-text-button .button-text {
+    display: block;
+    padding: 1em 2em;
+    font-size: 0.6em;
+    color: #FFF;
+    letter-spacing: 1px;
+    background: #ff008a;
 }
 
 .wl-aside-signup .sprite:before {
     content: "";
-    background: url(../img/sprite_sheet.png);
-    background-position: 0px -78px;
     position: absolute;
     width: 52px;
     height: 30px;
     left: -17px;
-    bottom: 22px;
+    background: url(../img/sprite_sheet.png);
+    background-position: 0px -120px;
 }
 
 /*============================
-Ticket #WLPROD-67 Browse Refinements
+Browse Refinements
 =============================*/
 
 .wl-refinement {
     position: relative;
-    overflow: hidden;
+    margin-top: 18px;
 }
 
-.wl-aside-browse-refinement-container {
-    max-width: 957px;
-}
 
 .wl-refinement:after {
     content: "";
     position: absolute;
     width: 100%;
     height: 1px;
-    left: 0;
-    top: 48%;
+    top: 50%;
     background-image: url(../img/border-50.png);
-    z-index: 1;
     opacity: 0.3;
+}
+
+/*============================
+Browse Refinements - Drop down buttons
+=============================*/
+
+.wl-refinement .wl-select {
+    margin-right: 5px;
+    padding: 0.5em 2em 0.5em 1.5em;
+    width: 150px;
+    float: left;
+    font-size: 0.7em;
+    font-family: Georgia;
+    color: #5E5E5E;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.2;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    background-image:url(../img/arrow_down.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-position: 95%;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    opacity: 0.9;
 }
 
 .wl-refinement .container {
@@ -319,32 +382,25 @@ Ticket #WLPROD-67 Browse Refinements
     z-index: 2;
 }
 
-.wl-refinement .wl-select {
-    margin-bottom: 1px;
-    padding: .5em 2em .5em 1.5em; 
-    width: 150px;
-    font-family: Georgia;
-    font-size: .55em;
-    font-weight: bold;
-    font-style: italic;
-    color: #5E5E5E;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    background-image:url(../img/arrow.png);
-    background-repeat:no-repeat;
-    background-position:right center;
-    opacity: 0.9;
-}
-
 .wl-refinement .container--left {
     float: left;
 }
 
 .wl-refinement .container--right {
-    position: relative;
     float: right;
-    line-height: 26px;
-    vertical-align: middle;
+    line-height: 28px;
+}
+
+/*============================
+Browse Refinements - Styles text
+=============================*/
+
+.wl-refinement .styles {
+    font-size: 0.8em;
+    font-family: Georgia, "Sans-Serif";
+    font-style: italic;
+    color: #a1a1a1;
+    letter-spacing: 1px;
 }
 
 .wl-submit-button {
@@ -355,71 +411,47 @@ Ticket #WLPROD-67 Browse Refinements
     display: inline;
 }
 
-.wl-refinement .text {
-    font-size: 0.6em;
-    font-family: Georgia, "Sans-Serif";
-    font-style: italic;
-    color: #a1a1a1;
-    letter-spacing: 1px;
-}
-
-
 /*============================
-WL Navigation - border with the name in the center
+WL Navigation
 =============================*/
 .wl-navigation {
-    display: block;
-    text-align: center;
     margin: auto;
-    width: 230px;
-}
-
-
-.wl-navigation .title {
-    display: inline-block;
-    position: relative;
-    padding: 0 0.45em;
-    top: 9px;
-    font-family: Georgia;
-    font-size: 0.75em;
-    font-style: italic;
-    background: white;
+    text-align: center;
 }
 
 .wl-navigation .menu {
-    text-align: left;
     padding: 1em 0 1em 0;
+    font-size: 0.6em;
     font-family: Lato;
-    font-size: 0.5em;
-    letter-spacing: 0.1825em;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .wl-navigation .wl-list-items {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .wl-navigation .list-item {
     display: block;
     padding: 0.845em 0 0.845em 2em;
-    text-decoration: none;
     color: #7e7e7e;
+    text-decoration: none;
     border-right: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
 }
 
 
 .wl-navigation .list-item:hover {
-    background: #f7f7f7;
     color: #000000;
+    background: #f7f7f7;
 }
 
 
-
 /*============================
-Removes bullets and indents sublist
+WL Navigation - Bullets and indentation
 =============================*/
 
 .js .wl-navigation .is-inactive {
@@ -437,13 +469,75 @@ Removes bullets and indents sublist
 .wl-navigation .sub-menu .sub-menu .list-item {
     padding-left: 4em;
 }
+
+
 /*============================
-Border Images
+Aside Titles
 =============================*/
 
-.light-grey-border {
-    border: 1px solid transparent;
-    border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;    
+.aside-title {
+    display: inline-block;
+    position: relative;
+    padding: 0 0.45em;
+    top: 9px;
+    font-size: 0.9em;
+    font-family: Georgia;
+    font-style: italic;
+    color: #7e7e7e;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background: #FFF;
 }
 
+/*============================
+Aside - Promotional Carousel
+=============================*/
+.wl-swipe {
+    margin-top: 14px;
+    text-align: center;
+}
 
+.wl-swipe .swipe {
+    position: relative;
+    padding: 20px 0 28px 0;
+    visibility: hidden;
+}
+.wl-swipe .swipe-wrap {
+    position: relative;
+
+}
+.wl-swipe .slide {
+    position: relative;
+    width:100%;
+    float:left;
+}
+
+.wl-swipe .slide-image {
+    display: block;
+}
+
+.wl-swipe .indicators {
+    line-height: 1;
+}
+
+.wl-swipe .position-indicator {
+    text-decoration: none;
+    color: #c4c4c4;
+    font-size: 1.4em;
+    letter-spacing: -2px;
+}
+
+.wl-swipe .on {
+    color: #ff008a;
+}
+
+/*============================
+Trends Creative TBD
+=============================*/
+
+.wl-tbd {
+    margin-top: 30px;
+    height: 300px;
+    text-align: center;
+    background: #eeeeee;
+}
