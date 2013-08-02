@@ -17,58 +17,42 @@ $(document).ready(function() {
 	});		
 });
 
-// Nav Menu Sliding
-$(document).ready(function(){
-	//iterate only through .wl-navigation and it's children
+
+//Navigation Menu JS
+$(document).ready(function() {
+	var $this = $(this);
 	$('.wl-navigation').each(function() {
-		//set $this equal for re-use to avoid jumping back into DOM
-		var $this = $(this),
-			//set SubList variable = to any element with a class .sub-menu
-			$subLists = $this.find('.sub-menu'),
-			//set Anchors = to any sibling occuring 1 step above the sublist
-			$anchors = $subLists.prev('.list-item');
-
-			$anchors.addClass('is-expandable');
-
-		//when you click the anchor run this function
-		$anchors.on('click', function(e){
-			//nullify default on-click behavior to avoid jumping to top of page
-			e.preventDefault();
-			//scope this to this anchor
-			var $thisAnchor = $(this),
-			//scope target to this anchor
-				$thisSubLists = $thisAnchor.find('+ .sub-menu');
-
-			//if the anchor that is clicked on has a state of 'is-active' do the following
-			if($thisAnchor.hasClass('is-active')) {
-				//find every element with a class of is-expandable and toggle is-active
-				$this
-					.find('.is-expandable')
-					.toggleClass('is-active');
-					//add the class of inactive to sublists of the clicked anchor
-				$thisSubLists.addClass('is-inactive');
-				console.log("condition 1");
-
-				//else if the sublist of the clicked anchor does NOT have a class of is-inactive (meaning it is active)
-			} else if(!$thisSubLists.hasClass('is-inactive')) {
-				//find all of the elements with .wl-list-items.sub.menu
-				$this
-					.find('.wl-list-items.sub-menu')
-					//and change them ALL to is-inactive -- unexpand all open menus. 
-					.addClass('is-inactive');
-			} else {
-				//if none of the previous conditions exist, remove the class is-active from everything, add it to the 
-				//clicked anchor and remove -is-inactive from everything.
-				$this
-					.find('.is-expandable')
-					.removeClass('is-active');
-				$thisAnchor.addClass('is-active');
-				$thisSubLists.removeClass('is-inactive');
-			}
-
+		var anchor = $this.find('.sub-menu').closest('li').children('.list-item');
+		anchor.on('click', function(e) {
+			e.preventDefault;
+				var target = $(this),
+					subMenu = target.parent('li').children('.sub-menu'),
+					parentMenu = subMenu.parents('.sub-menu').closest('li').children('.list-item'),
+					allsubMenu = $this.find('.sub-menu'),
+					allAnchor = $this.find('.sub-menu').closest('li').children('.list-item');
+				if(target.hasClass('is-active')) {
+					target.removeClass('is-active');
+					subMenu.removeClass('visible-menu');
+					parentMenu.toggleClass('is-active');
+				} else {
+					if (subMenu.hasClass('visible-menu')) {
+						allsubMenu.removeClass('visible-menu');
+						allAnchor.removeClass('is-active');
+					} else {
+							target.addClass('is-active');
+							subMenu.addClass('visible-menu');
+							parentMenu.toggleClass('is-active');
+					};
+				};
 		});
+
 	});
+
 });
+
+
+
+
 
 // Swipe.js Aside Promotional Carousel
 

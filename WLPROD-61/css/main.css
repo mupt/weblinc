@@ -454,12 +454,16 @@ WL Navigation
 WL Navigation - Bullets and indentation
 =============================*/
 
-.js .wl-navigation .is-inactive {
+.js .wl-navigation .sub-menu {
     display: none;
 }
 
 .js .wl-navigation .is-active {
     color: #eb5190;
+}
+
+.js .wl-navigation .visible-menu {
+    display: block;
 }
 
 .wl-navigation .sub-menu .list-item {
