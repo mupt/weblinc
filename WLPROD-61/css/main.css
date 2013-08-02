@@ -428,13 +428,13 @@ WL Navigation
     text-align: left;
 }
 
-.wl-navigation .wl-list-items {
+.wl-navigation .wl-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.wl-navigation .list-item {
+.wl-navigation .list-item-link {
     display: block;
     padding: 0.845em 0 0.845em 2em;
     color: #7e7e7e;
@@ -444,7 +444,7 @@ WL Navigation
 }
 
 
-.wl-navigation .list-item:hover {
+.wl-navigation .list-item-link:hover {
     color: #000000;
     background: #f7f7f7;
 }
@@ -460,17 +460,16 @@ WL Navigation - Bullets and indentation
 
 .js .wl-navigation .is-active {
     color: #eb5190;
-}
-
-.js .wl-navigation .visible-menu {
     display: block;
 }
 
-.wl-navigation .sub-menu .list-item {
+
+
+.wl-navigation .sub-menu .list-item-link {
     padding-left: 3em;
 }
 
-.wl-navigation .sub-menu .sub-menu .list-item {
+.wl-navigation .sub-menu .sub-menu .list-item-link {
     padding-left: 4em;
 }
 
