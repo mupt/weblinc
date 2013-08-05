@@ -33,6 +33,7 @@ only screen and (max-device-width: 1200px){
     }
 }
 
+
 /*=====================================
 Clearfix / Reusable styles
 ======================================*/
@@ -57,11 +58,14 @@ Header
 
 .wl-header {
     text-align: center;
-    font-size: 3em;
-    color: white;
-    background: #555;
+    background: #eee;
 }
 
+.wl-header .placeholder {
+    margin-top: 0;
+    font-size: 3em;
+    font-family: Georgia;
+}
 /*============================
 Thumbnail Grid
 ============================*/
@@ -69,7 +73,6 @@ Thumbnail Grid
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 .wl-item-list .wl-item {
@@ -125,6 +128,7 @@ Thumbnails
 
 .wl-thumbnail-container {
      position: relative;
+     width: 236px;
 }
 
 /*============================
