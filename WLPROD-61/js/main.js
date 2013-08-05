@@ -5,46 +5,36 @@ $(document).ready(function() {
 		var $this = $(this),
 			mainimage = $this.find( $('.wl-thumbnail') ),
 			$swatch = $this.find('.swatch-list a');
-			$swatch.on('click', function() {	
-  				var src = $(this).data('src'),
-  				mainimage_source = mainimage.attr("src");
-  			if (mainimage_source != src ) {
-				mainimage.attr('src', src); 
-				} else {		
-				return;							
-				}
-			});
+		$swatch.on('click', function(e) {
+				e.preventDefault();
+				var src = $(this).data('src'),
+				mainimage_source = mainimage.attr("src");
+			if (mainimage_source != src ) {
+			mainimage.attr('src', src); 
+			} else {		
+			return;							
+			}
+		});
 	});		
-});
-
-
-// Navigation Menu JS
-$(document).ready(function() {
-	var $this = $(this);
 	$('.wl-navigation').each(function(){        
-		var allLink = $this.find('.list-item-link');
+		var allLink = $(this).find('.list-item-link');
 		allLink.on('click', function() {		
 			var $this = $(this),
 				menu = $this.next('.wl-list'),
 				parentMenu = $this.parents('.wl-list');
 				allMenus = $('.wl-list');
-					if($this.hasClass('is-active')) {
-						$this.toggleClass('is-active');
-						menu.toggleClass('is-active');	
-					} else {
-						allMenus.removeClass('is-active');
-						allLink.removeClass('is-active');
-						parentMenu.toggleClass('is-active');
-						$this.toggleClass('is-active');
-						menu.toggleClass('is-active');
-					};
+			if($this.hasClass('is-active')) {
+				$this.toggleClass('is-active');
+				menu.toggleClass('is-active');	
+			} else {
+				allMenus.removeClass('is-active');
+				allLink.removeClass('is-active');
+				parentMenu.toggleClass('is-active');
+				$this.toggleClass('is-active');
+				menu.toggleClass('is-active');
+			};
 		});
 	});
-});
-
-
-// Swipe.js Aside Promotional Carousel
-$(document).ready(function(){
 	$('.wl-swipe').each(function() { 
 		var $this = $(this),
 			$swipe = $this.find('.swipe'),
@@ -102,6 +92,8 @@ $(document).ready(function(){
 			});
 	});
 });
+
+
 
 
 

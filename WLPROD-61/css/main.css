@@ -6,6 +6,13 @@ Main Page Layout
     margin:auto;
     width: 1200px;
 }
+@media only screen and (max-width: 1200px),
+only screen and (max-device-width: 1200px){
+    .wl-page {
+        margin: auto;
+        width: 900px;
+    }
+}
 .wl-main {
     width: 80%;
     float: left;   
@@ -19,20 +26,13 @@ Main Page Layout
     float: left;
 }
 
-/*=====================================
-Main Page Layout - Resize to 900px layout.
-======================================*/
-
 @media only screen and (max-width: 1200px),
 only screen and (max-device-width: 1200px){
-    .wl-page {
-        margin: auto;
-        width: 900px;
-    }
-    .wl-aside {
+      .wl-aside {
         width: 17.7778%; /* 160px / 900 = 17.7778% */
     }
 }
+
 /*=====================================
 Clearfix / Reusable styles
 ======================================*/
@@ -44,7 +44,7 @@ Clearfix / Reusable styles
 Border Images
 =============================*/
 
-.light-grey-border {
+.wl-light-grey-border {
     border: 1px solid transparent;
     -webkit-border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;
     -moz-border-image: url(../img/border-50.png)5 5 5 5 repeat stretch;
