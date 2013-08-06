@@ -464,10 +464,29 @@ WL Navigation - Bullets and indentation
 
 .js .wl-navigation .is-active {
     color: #eb5190;
+}
+
+.js .wl-navigation .is-expanded {
     display: block;
 }
 
+.wl-navigation .sub-menu-link:after {
+    content:"";
+    background-image:url(../img/arrow_down.png);
+    margin-left: 7px;   
+    width: 14px;
+    height: 10px;
+    position: absolute;
+}
 
+.wl-navigation .is-active:after {
+    content:"";
+    background-image:url(../img/active_down_arrow.png);
+    margin-left: 7px;   
+    width: 14px;
+    height: 10px;
+    position: absolute;
+}
 
 .wl-navigation .sub-menu .list-item-link {
     padding-left: 3em;

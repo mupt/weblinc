@@ -23,15 +23,17 @@ $(document).ready(function() {
 				menu = $this.next('.wl-list'),
 				parentMenu = $this.parents('.wl-list');
 				allMenus = $('.wl-list');
+				parentMenuLink = $this.closest('.wl-list').prev('.sub-menu-link');
 			if($this.hasClass('is-active')) {
 				$this.toggleClass('is-active');
-				menu.toggleClass('is-active');	
+				menu.toggleClass('is-expanded');	
+				parentMenuLink.toggleClass('is-active');
 			} else {
-				allMenus.removeClass('is-active');
+				allMenus.removeClass('is-expanded');
 				allLink.removeClass('is-active');
-				parentMenu.toggleClass('is-active');
+				parentMenu.toggleClass('is-expanded');
 				$this.toggleClass('is-active');
-				menu.toggleClass('is-active');
+				menu.toggleClass('is-expanded');
 			};
 		});
 	});
